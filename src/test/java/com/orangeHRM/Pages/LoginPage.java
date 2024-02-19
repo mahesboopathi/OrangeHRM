@@ -17,9 +17,9 @@ public class LoginPage {
 	By usename = By.name("username");
 	By passwor = By.name("password");
 	By login = By.xpath("//button[@type='submit']");
-	// By profile = By.xpath("//div[@class='oxd-brand-banner']");
+	By profile = By.xpath("//div[@class='oxd-brand-banner']");
 
-	By profile = By.xpath("//div[@class='oxd-sidepanel-body']//ul//li[1]//span");
+	// By profile = By.xpath("//div[@class='oxd-sidepanel-body']//ul//li[1]//span");
 
 	public void userName(String uid) {
 
@@ -34,13 +34,12 @@ public class LoginPage {
 		driver.findElement(login).click();
 	}
 
-	/*
-	 * public boolean homepage() { return driver.findElement(profile).isDisplayed();
-	 * }
-	 */
-
-	public String profilePage() {
-
-		return driver.findElement(profile).getText();
+	public boolean login() {
+	return	driver.findElement(profile).isDisplayed();
 	}
+	/*
+	 * public String profilePage() {
+	 * 
+	 * return driver.findElement(profile).getText(); }
+	 */
 }
